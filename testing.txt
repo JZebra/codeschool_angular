@@ -1,0 +1,4 @@
+Directives = HTML annotations that trigger js
+Modules = js application components
+Controllers = inside the module-- where we add application behavior
+Expressions = how values are displayed in the page

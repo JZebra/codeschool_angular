@@ -1,0 +1,16 @@
+<body>
+  <div ng-controller="StoreController as store">
+<!--iterate through store.products -->
+    <div ng-repeat="product in store.products">
+      <div ng-hide="store.product.soldOut">
+        <h1> {{product.name}} </h1>
+        <h2> {{product.price}} </h2>
+        <h3> {{product.description}} </h3>
+  <!--button will only show if store.product.canPurchase == true -->
+        <button ng-show="store.product.canPurchase">{{ Add to Cart }}</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
