@@ -4,7 +4,8 @@
     <div ng-repeat="product in store.products">
       <div ng-hide="store.product.soldOut">
         <h1> {{product.name}} </h1>
-        <h2> {{product.price}} </h2>
+<!--pipe the price into the currency filter -->
+        <h2> {{product.price | currency}} </h2>
         <h3> {{product.description}} </h3>
   <!--button will only show if store.product.canPurchase == true -->
         <button ng-show="store.product.canPurchase">{{ Add to Cart }}</button>
